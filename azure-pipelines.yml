@@ -28,5 +28,5 @@ stages:
         tags: |
           $(tag)
 
-    - script: 'docker run -e CI=true $(Build.BuildId) npm run test'
+    - script: 'docker run -e CI=true $(imageName) npm run test'
       displayName: Run tests
