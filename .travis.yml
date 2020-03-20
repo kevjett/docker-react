@@ -7,3 +7,7 @@ before_install:
 
 script:
     - docker run -e CI=true kevjett/docker-react npm run test
+
+deploy:
+    provider: azure_web_apps
+    on: production
